@@ -1,0 +1,194 @@
+
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #12345a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffffff;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    color: #12345a;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 18px;
+}
+
+nav a:hover {
+    color: #1683d8;
+}
+
+/* Main Content */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    color: #12345a;
+    margin-bottom: 15px;
+}
+
+/* Form Layout */
+#recordForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+#recordForm div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1683d8;
+    border-color: #1683d8;
+}
+
+/* Buttons */
+button {
+    background-color: #1466a8;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0d4779;
+}
+
+button:focus-visible {
+    outline: 3px solid #1683d8;
+    outline-offset: 3px;
+}
+
+/* Search and Filter */
+#search,
+#filterStatus {
+    margin: 8px 0 18px;
+    max-width: 400px;
+    display: block;
+}
+
+/* Messages */
+#message {
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+/* Record List */
+#recordList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.record-card {
+    border: 1px solid #dce3eb;
+    border-left: 5px solid #1466a8;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.record-card h3 {
+    color: #12345a;
+    margin-bottom: 8px;
+}
+
+.record-card button {
+    margin: 10px 5px 0 0;
+}
+
+/* Footer */
+footer {
+    background-color: #12345a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+
+    main {
+        padding: 12px;
+    }
+
+    #recordForm,
+    #recordList {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Support Desk | Mulungushi University</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>IT Support Desk</h1>
+        <p>Mulungushi University - Computer Support Request System</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#manage">Manage Records</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to the IT Support Desk</h2>
+            <p>
+                Submit and manage IT support requests for computer,
+                software and network-related problems.
+            </p>
+        </section>
+
+        <!-- Manage Records Section -->
+        <section id="manage">
+            <h2>Manage Support Requests</h2>
+
+            <form id="recordForm">
+
+                <input type="hidden" id="recordId">
+
+                <div>
+                    <label for="title">Request Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        minlength="3"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Software">Software</option>
+                        <option value="Network">Network</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="description">Description</label>
+                    <textarea
+                        id="description"
+                        minlength="5"
+                        maxlength="300"
+                        required
+                    ></textarea>
+                </div>
+
+                <div>
+                    <label for="status">Status</label>
+                    <select id="status" required>
+                        <option value="Pending">Pending</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Add Request
+                </button>
+
+                <button type="button" id="cancelEdit" hidden>
+                    Cancel Edit
+                </button>
+
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+            <div>
+                <label for="search">Search by Title</label>
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search requests..."
+                >
+            </div>
+
+            <div>
+                <label for="filterStatus">Filter by Status</label>
+                <select id="filterStatus">
+                    <option value="All">All Statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In progress">In progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <p id="recordCount">0 records found</p>
+
+            <div id="recordList">
+                <!-- Records will appear here -->
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About This Project</h2>
+
+            <p>Project Name: IT Support Desk</p>
+            <p>Student Number: 202503104</p>
+            <p>This version uses browser demonstration data.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IT Support Desk - Mulungushi University</p>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
